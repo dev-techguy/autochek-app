@@ -1,10 +1,10 @@
 /* eslint-disable prettier/prettier */
 import { Optional } from "@nestjs/common";
 import { MaxLength } from "class-validator";
-import { BeforeUpdate, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { BaseEntity, BeforeUpdate, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
-export class LocationEntity {
+export class LocationEntity extends BaseEntity {
     @PrimaryGeneratedColumn()
     id: number;
 
