@@ -8,10 +8,12 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { Observable } from 'rxjs';
 import { Location } from 'src/repository/location.interface';
 import { LocationService } from 'src/service/location.service';
 
+@ApiTags()
 @Controller('locations')
 export class LocationController {
   constructor(private readonly locationService: LocationService) {}
