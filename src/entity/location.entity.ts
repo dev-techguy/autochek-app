@@ -38,8 +38,8 @@ export class LocationEntity extends BaseEntity {
   description: string;
 
   @ApiProperty({ required: true })
-  @Column({ type: 'jsonb', nullable: false })
-  coordinates: JSON;
+  @Column({ type: 'simple-array', nullable: false })
+  coordinates: JSON[];
 
   @Column({
     type: 'timestamp',

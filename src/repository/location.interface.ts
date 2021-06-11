@@ -4,5 +4,5 @@ export interface Location {
   contactPerson: string;
   website?: string;
   description: string;
-  coordinates: JSON;
+  coordinates: JSON[];
 }
