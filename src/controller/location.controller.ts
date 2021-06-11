@@ -14,7 +14,7 @@ import { LocationEntity } from 'src/entity/location.entity';
 import { Location } from 'src/repository/location.interface';
 import { LocationService } from 'src/service/location.service';
 
-@ApiTags()
+@ApiTags('locations')
 @Controller('locations')
 export class LocationController {
   constructor(private readonly locationService: LocationService) {}
