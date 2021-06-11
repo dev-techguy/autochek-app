@@ -2,7 +2,7 @@ import { Controller, Get } from '@nestjs/common';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
 import { DistanceService } from 'src/service/distance.service';
 
-@ApiTags('distnace')
+@ApiTags('distance')
 @Controller('distance')
 export class DistanceController {
   constructor(private readonly distanceService: DistanceService) {}
