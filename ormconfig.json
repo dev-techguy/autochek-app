@@ -4,8 +4,8 @@
     "host": "localhost",
     "port": 5432,
     "username": "postgres",
-    "password": "dev@techguy",
-    "database": "nest_1_app",
+    "password": "password",
+    "database": "database_name",
     "entities": [
         "dist/**/*.entity{.ts,.js}"
     ],
