@@ -1,2 +1,4 @@
 @Injectable()
-export class LocationService { }
+export class LocationService {
+    
+ }
