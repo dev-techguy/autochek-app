@@ -1,11 +1,16 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsAlpha, IsNumber, IsUrl, MaxLength } from 'class-validator';
+import {
+  IsJSON,
+  IsNumber,
+  IsString,
+  IsUrl,
+  MaxLength,
+} from 'class-validator';
 import {
   BaseEntity,
   BeforeUpdate,
   Column,
   Entity,
-  IsNull,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
@@ -15,7 +20,7 @@ export class LocationEntity extends BaseEntity {
   id: number;
 
   @ApiProperty({ required: true })
-  @IsAlpha()
+  @IsString()
   @Column({ type: 'varchar', length: 255, nullable: false, unique: true })
   @MaxLength(255)
   name: string;
@@ -27,7 +32,7 @@ export class LocationEntity extends BaseEntity {
   phoneNumber: string;
 
   @ApiProperty({ required: true })
-  @IsAlpha()
+  @IsString()
   @Column({ type: 'varchar', length: 255, nullable: false })
   @MaxLength(255)
   contactPerson: string;
@@ -39,10 +44,12 @@ export class LocationEntity extends BaseEntity {
   website: string;
 
   @ApiProperty({ required: true })
+  @IsString()
   @Column({ type: 'text', nullable: false })
   description: string;
 
   @ApiProperty({ required: true })
+  @IsJSON()
   @Column({ type: 'simple-array', nullable: false })
   coordinates: JSON[];
 

@@ -11,6 +11,6 @@ export class DistanceService {
   ) {}
 
   getDistance() {
-    return 'Logice yet to be implemented';
+    return 'Logic yet to be implemented';
   }
 }
